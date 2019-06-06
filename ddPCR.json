@@ -1,0 +1,317 @@
+{
+  "bco_id" : "https://github.com/ohliumliu/PrecisionFDA_App-a-thon/blob/master/ddPCR.json",
+  "checksum" : "TBD",
+  "bco_spec_version" : "https://github.com/biocompute-objects/PrecisionFDA_App-a-thon/tree/1.3.0/base_schema/biocomputeobject.json",
+  "provenance_domain" : {
+    "name" : "T790M mutation detection",
+    "version" : "0.1.0",
+    "review" : [
+      {
+        "status" : "in-review",
+        "reviewer_comment" : "Under development and active review by RainSure staff",
+        "date" : "2019-06-04T19:08:09+0800",
+        "reviewer" : {
+          "name" : "Yu Liu",
+          "affiliation" : "RainSure Scientific",
+          "email" : "yliu@rainsurebio.com",
+          "contribution" : [
+            "authoredBy"
+          ],
+          "orcid" : "https://orcid.org/0000-0002-0489-8466"
+        }
+      }
+    ],
+    "obsolete_after" : "2089-06-04T19:08:09+0800",
+    "embargo" : {
+      "start_time" : "1989-06-04T19:08:09+0800",
+      "end_time" : "2019-06-04T19:08:09+0800"
+    },
+    "created" : "2019-06-04T00:00:00+0800",
+    "modified" : "2019-06-04T19:08:09+0800",
+    "contributors" : [
+      {
+        "name" : "Yu Liu",
+        "affiliation" : "RainSure Scientific",
+        "email" : "yliu@rainsurebio.com",
+        "contribution" : [
+          "createdBy",
+          "curatedBy"
+        ],
+        "orcid" : "https://orcid.org/0000-0002-0489-8466"
+      }
+    ],
+    "license" : "https://spdx.org/licenses/CC-BY-4.0.html"
+  },
+  "description_domain" : {
+    "keywords" : [
+      "T790M",
+      "EGFR",
+      "lung cancer",
+      "SNP"
+    ],
+    "xref" : [
+      {
+        "namespace" : "medgen",
+        "name" : "MedGen",
+        "ids" : [
+          "C4016033"
+        ],
+        "access_time" : "2019-06-03:T22:27:00-0800"
+      },
+      {
+        "namespace" : "so",
+        "name" : "Sequence Ontology",
+        "ids" : [
+          "SO:0001583"
+        ],
+        "access_time" : "2019-06-03:T22:27:00-0800"
+      }
+    ],
+    "platform" : [
+      "GeneCount"
+    ],
+    "pipeline_steps" : [
+      {
+        "step_number" : 1,
+        "name" : "HIVE-hexagon",
+        "description" : "Alignment of reads to a set of references",
+        "version" : "1.3",
+        "prerequisite" : [
+          {
+            "name" : "Hepatitis C virus genotype 1",
+            "uri" : {
+              "uri" : "http://www.ncbi.nlm.nih.gov/nuccore/22129792",
+              "access_time" : "2017-01-24T09:40:17-0500"
+            }
+          },
+          {
+            "name" : "Hepatitis C virus type 1b complete genome",
+            "uri" : {
+              "uri" : "http://www.ncbi.nlm.nih.gov/nuccore/5420376",
+              "access_time" : "2017-01-24T09:40:17-0500"
+            }
+          },
+          {
+            "name" : "Hepatitis C virus (isolate JFH-1) genomic RNA",
+            "uri" : {
+              "uri" : "http://www.ncbi.nlm.nih.gov/nuccore/13122261",
+              "access_time" : "2017-01-24T09:40:17-0500"
+            }
+          },
+          {
+            "name" : "Hepatitis C virus clone J8CF, complete genome",
+            "uri" : {
+              "uri" : "http://www.ncbi.nlm.nih.gov/nuccore/386646758",
+              "access_time" : "2017-01-24T09:40:17-0500"
+            }
+          },
+          {
+            "name" : "Hepatitis C virus S52 polyprotein gene",
+            "uri" : {
+              "uri" : "http://www.ncbi.nlm.nih.gov/nuccore/295311559",
+              "access_time" : "2017-01-24T09:40:17-0500"
+            }
+          }
+        ],
+        "input_list" : [
+          {
+            "uri" : "http://example.com/dna.cgi?cmd=objFile&ids=514683",
+            "access_time" : "2017-01-24T09:40:17-0500"
+          },
+          {
+            "uri" : "http://example.com/dna.cgi?cmd=objFile&ids=514682",
+            "access_time" : "2017-01-24T09:40:17-0500"
+          }
+        ],
+        "output_list" : [
+          {
+            "uri" : "http://example.com/data/514769/allCount-aligned.csv",
+            "access_time" : "2017-01-24T09:40:17-0500"
+          }
+        ]
+      },
+      {
+        "step_number" : 2,
+        "name" : "HIVE-heptagon",
+        "description" : "variant calling",
+        "version" : "1.3",
+        "input_list" : [
+          {
+            "uri" : "http://example.com/data/514769/dnaAccessionBased.csv",
+            "access_time" : "2017-01-24T09:40:17-0500"
+          }
+        ],
+        "output_list" : [
+          {
+            "uri" : "http://example.com/data/514801/SNPProfile.csv",
+            "access_time" : "2017-01-24T09:40:17-0500"
+          },
+          {
+            "uri" : "http://example.com/data/14769/allCount-aligned.csv",
+            "access_time" : "2017-01-24T09:40:17-0500"
+          }
+        ]
+      }
+    ]
+  },
+  "usability_domain" : [
+    "Detect the abundance of EGFR (T790M)[SO:0001583] mutation in tumor tissue and plasma which is one of the mutations\n responsible for the failure of tyrosine kinase inhibitor drugs in the treatment of nonsmall-cell lung cancer (NSCLC)"
+  ],
+  "extension_domain" : {
+    "scm_extension" : {
+      "scm_repository" : "https://github.com/rainsure/PrecisionFDA_App-a-thon",
+      "scm_type" : "git",
+      "scm_commit" : "c9ffea0b60fa3bcf8e138af7c99ca141a6b8fb21",
+      "scm_path" : "workflow/hive-viral-mutation-detection.cwl",
+      "scm_preview" : "https://github.com/example/repo1/blob/c9ffea0b60fa3bcf8e138af7c99ca141a6b8fb21/workflow/hive-viral-mutation-detection.cwl"
+    }
+  },
+  "execution_domain" : {
+    "script" : [
+      {
+        "uri" : {
+          "uri" : "https://example.com/workflows/antiviral_resistance_detection_hive.py"
+        }
+      }
+    ],
+    "script_driver" : "shell",
+    "software_prerequisites" : [
+      {
+        "name" : "HIVE-hexagon",
+        "version" : "babajanian.1",
+        "uri" : {
+          "uri" : "http://example.com/dna.cgi?cmd=dna-hexagon&cmdMode=-",
+          "access_time" : "2017-01-24T09:40:17-0500",
+          "sha1_checksum" : "d60f506cddac09e9e816531e7905ca1ca6641e3c"
+        }
+      },
+      {
+        "name" : "HIVE-heptagon",
+        "version" : "albinoni.2",
+        "uri" : {
+          "uri" : "http://example.com/dna.cgi?cmd=dna-heptagon&cmdMode=-",
+          "access_time" : "2017-01-24T09:40:17-0500"
+        }
+      }
+    ],
+    "external_data_endpoints" : [
+      {
+        "name" : "HIVE",
+        "url" : "http://example.com/dna.cgi?cmd=login"
+      },
+      {
+        "name" : "access to e-utils",
+        "url" : "http://eutils.ncbi.nlm.nih.gov/entrez/eutils/"
+      }
+    ],
+    "environment_variables" : {
+      "HOSTTYPE" : "x86_64-linux",
+      "EDITOR" : "vim"
+    }
+  },
+  "parametric_domain" : [
+    {
+      "param" : "seed",
+      "value" : "14",
+      "step" : "1"
+    },
+    {
+      "param" : "minimum_match_len",
+      "value" : "66",
+      "step" : "1"
+    },
+    {
+      "param" : "divergence_threshold_percent",
+      "value" : "0.30",
+      "step" : "1"
+    },
+    {
+      "param" : "minimum_coverage",
+      "value" : "15",
+      "step" : "2"
+    },
+    {
+      "param" : "freq_cutoff",
+      "value" : "0.10",
+      "step" : "2"
+    }
+  ],
+  "io_domain" : {
+    "input_subdomain" : [
+      {
+        "uri" : {
+          "filename" : "Hepatitis C virus genotype 1",
+          "uri" : "http://www.ncbi.nlm.nih.gov/nuccore/22129792",
+          "access_time" : "2017-01-24T09:40:17-0500"
+        }
+      },
+      {
+        "uri" : {
+          "filename" : "Hepatitis C virus type 1b complete genome",
+          "uri" : "http://www.ncbi.nlm.nih.gov/nuccore/5420376",
+          "access_time" : "2017-01-24T09:40:17-0500"
+        }
+      },
+      {
+        "uri" : {
+          "filename" : "Hepatitis C virus (isolate JFH-1) genomic RNA",
+          "uri" : "http://www.ncbi.nlm.nih.gov/nuccore/13122261",
+          "access_time" : "2017-01-24T09:40:17-0500"
+        }
+      },
+      {
+        "uri" : {
+          "uri" : "http://www.ncbi.nlm.nih.gov/nuccore/386646758",
+          "access_time" : "2017-01-24T09:40:17-0500"
+        }
+      },
+      {
+        "uri" : {
+          "filename" : "Hepatitis C virus S52 polyprotein gene",
+          "uri" : "http://www.ncbi.nlm.nih.gov/nuccore/295311559",
+          "access_time" : "2017-01-24T09:40:17-0500"
+        }
+      },
+      {
+        "uri" : {
+          "filename" : "HCV1a_drug_resistant_sample0001-01",
+          "uri" : "http://example.com/nuc-read/514682",
+          "access_time" : "2017-01-24T09:40:17-0500"
+        }
+      },
+      {
+        "uri" : {
+          "filename" : "HCV1a_drug_resistant_sample0001-02",
+          "uri" : "http://example.com/nuc-read/514683",
+          "access_time" : "2017-01-24T09:40:17-0500"
+        }
+      }
+    ],
+    "output_subdomain" : [
+      {
+        "mediatype" : "text/csv",
+        "uri" : {
+          "uri" : "http://example.com/data/514769/dnaAccessionBased.csv",
+          "access_time" : "2017-01-24T09:40:17-0500"
+        }
+      },
+      {
+        "mediatype" : "text/csv",
+        "uri" : {
+          "uri" : "http://example.com/data/514801/SNPProfile*.csv",
+          "access_time" : "2017-01-24T09:40:17-0500"
+        }
+      }
+    ]
+  },
+  "error_domain" : {
+    "empirical_error" : {
+      "false_negative_alignment_hits" : "<0.0010",
+      "false_discovery" : "<0.05"
+    },
+    "algorithmic_error" : {
+      "false_positive_mutation_calls_discovery" : "<0.00005",
+      "false_discovery" : "0.005"
+    }
+  }
+}
