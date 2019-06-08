@@ -73,82 +73,77 @@
     "pipeline_steps" : [
       {
         "step_number" : 1,
-        "name" : "HIVE-hexagon",
-        "description" : "Alignment of reads to a set of references",
-        "version" : "1.3",
-        "prerequisite" : [
-          {
-            "name" : "Hepatitis C virus genotype 1",
-            "uri" : {
-              "uri" : "http://www.ncbi.nlm.nih.gov/nuccore/22129792",
-              "access_time" : "2017-01-24T09:40:17-0500"
-            }
-          },
-          {
-            "name" : "Hepatitis C virus type 1b complete genome",
-            "uri" : {
-              "uri" : "http://www.ncbi.nlm.nih.gov/nuccore/5420376",
-              "access_time" : "2017-01-24T09:40:17-0500"
-            }
-          },
-          {
-            "name" : "Hepatitis C virus (isolate JFH-1) genomic RNA",
-            "uri" : {
-              "uri" : "http://www.ncbi.nlm.nih.gov/nuccore/13122261",
-              "access_time" : "2017-01-24T09:40:17-0500"
-            }
-          },
-          {
-            "name" : "Hepatitis C virus clone J8CF, complete genome",
-            "uri" : {
-              "uri" : "http://www.ncbi.nlm.nih.gov/nuccore/386646758",
-              "access_time" : "2017-01-24T09:40:17-0500"
-            }
-          },
-          {
-            "name" : "Hepatitis C virus S52 polyprotein gene",
-            "uri" : {
-              "uri" : "http://www.ncbi.nlm.nih.gov/nuccore/295311559",
-              "access_time" : "2017-01-24T09:40:17-0500"
-            }
-          }
-        ],
+        "name" : "GeneCount-scavenger",
+        "description" : "Extract signals from microscopic images of droplets",
+        "version" : "0.1",
+        "prerequisite" : [],
         "input_list" : [
           {
-            "uri" : "http://example.com/dna.cgi?cmd=objFile&ids=514683",
-            "access_time" : "2017-01-24T09:40:17-0500"
-          },
-          {
-            "uri" : "http://example.com/dna.cgi?cmd=objFile&ids=514682",
-            "access_time" : "2017-01-24T09:40:17-0500"
+            "uri" : "link to raw images",
+            "access_time" : ""
           }
         ],
         "output_list" : [
           {
-            "uri" : "http://example.com/data/514769/allCount-aligned.csv",
-            "access_time" : "2017-01-24T09:40:17-0500"
+            "uri" : "link to droplets_all.json",
+            "access_time" : ""
           }
         ]
       },
       {
         "step_number" : 2,
-        "name" : "HIVE-heptagon",
-        "description" : "variant calling",
+        "name" : "GeneCount-colander",
+        "description" : "Remove droplets failing quality control",
         "version" : "1.3",
+        "prerequisite" : [],
         "input_list" : [
           {
-            "uri" : "http://example.com/data/514769/dnaAccessionBased.csv",
-            "access_time" : "2017-01-24T09:40:17-0500"
+            "uri" : "link to droplets_all.json",
+            "access_time" : ""
           }
         ],
         "output_list" : [
           {
-            "uri" : "http://example.com/data/514801/SNPProfile.csv",
-            "access_time" : "2017-01-24T09:40:17-0500"
-          },
+            "uri" : "link to droplets_effective.json",
+            "access_time" : ""
+          }
+        ]
+      },
+      {
+        "step_number" : 3,
+        "name" : "GeneCount-distiller",
+        "description" : "Calculate concentration of targets",
+        "version" : "1.3",
+        "prerequisite" : [],
+        "input_list" : [
           {
-            "uri" : "http://example.com/data/14769/allCount-aligned.csv",
-            "access_time" : "2017-01-24T09:40:17-0500"
+            "uri" : "link to droplets_effective.json",
+            "access_time" : ""
+          }
+        ],
+        "output_list" : [
+          {
+            "uri" : "link to concentration.json",
+            "access_time" : ""
+          }
+        ]
+      },
+      {
+        "step_number" : 4,
+        "name" : "GeneCount-platter",
+        "description" : "Generate clinical report on T790M mutation of patient sample",
+        "version" : "1.3",
+        "prerequisite" : [],
+        "input_list" : [
+          {
+            "uri" : "link to concentration.json",
+            "access_time" : ""
+          }
+        ],
+        "output_list" : [
+          {
+            "uri" : "link to T790M_report.json",
+            "access_time" : ""
           }
         ]
       }
@@ -170,12 +165,49 @@
     "script" : [
       {
         "uri" : {
-          "uri" : "https://example.com/workflows/antiviral_resistance_detection_hive.py"
+          "uri" : "link to T790M_pipeline script"
         }
       }
     ],
     "script_driver" : "shell",
-    "software_prerequisites" : [],
+    "software_prerequisites" : [
+      {
+        "name" : "GeneCount-scavenger",
+        "version" : "",
+        "uri" : {
+          "uri" : "link to GeneCount-scavenger",
+          "access_time" : "",
+          "sha1_checksum" : ""
+        }
+      },
+      {
+        "name" : "GeneCount-strainer",
+        "version" : "",
+        "uri" : {
+          "uri" : "link to GeneCount-strainer",
+          "access_time" : "",
+          "sha1_checksum" : ""
+        }
+      },
+      {
+        "name" : "GeneCount-distiller",
+        "version" : "",
+        "uri" : {
+          "uri" : "link to GeneCount-distiller",
+          "access_time" : "",
+          "sha1_checksum" : ""
+        }
+      },
+      {
+        "name" : "GeneCount-platter",
+        "version" : "",
+        "uri" : {
+          "uri" : "link to GeneCount-platter",
+          "access_time" : "",
+          "sha1_checksum" : ""
+        }
+      }
+    ],
     "external_data_endpoints" : [
       {
         "name" : "GeneCount",
