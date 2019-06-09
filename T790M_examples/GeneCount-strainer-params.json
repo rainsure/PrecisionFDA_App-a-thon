@@ -1,0 +1,56 @@
+{
+  "StrainerParameters" : {
+    "FilteringDroplets_IsEnabled" : true,
+    "Sizing" : {
+      "Sizing_IsEnabled" : true,
+      "Sizing_SigmaMultiplier" : 3,
+      "Sizing_Count" : 616,
+      "Sizing_Rate" : 0.024,
+      "Sizing_Mean" : 204.24,
+      "Sizing_LimitMin" : 117.35,
+      "Sizing_LimitMax" : 301.14
+    },
+    "QualityMetric" : {
+      "QualityMetric_IsEnabled" : true,
+      "QualityMetric_Threshold" : 0.85,
+      "QualityMetric_Count" : 2512,
+      "QualityMetric_Rate" : 0.1
+    },
+    "AbnormalAmpl" : {
+      "AbnormalAmpl_IsEnabled" : true,
+      "AbnormalAmpl_Threshold" : [
+        [
+          0,
+          35000
+        ],
+        [
+          0,
+          60000
+        ],
+        [
+          0,
+          60000
+        ],
+        [
+          0,
+          60000
+        ],
+        [
+          0,
+          10000
+        ]
+      ],
+      "AbnormalAmpl_Count" : 0,
+      "AbnormalAmpl_Rate" : 0
+    },
+    "Location" : {
+      "Location_IsEnabled" : true,
+      "Location_Range1_Start" : 1500,
+      "Location_Range1_Stop" : 12000,
+      "Location_Range2_Start" : 13500,
+      "Location_Range2_Stop" : 25000,
+      "Location_Count" : 2282,
+      "Location_Rate" : 0.09
+    }
+  }
+}

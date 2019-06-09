@@ -81,6 +81,10 @@
           {
             "uri" : "link to raw images",
             "access_time" : ""
+          },
+          {
+            "uri" : "link to GeneCount-scavenger-params.json",
+            "access_time" : ""
           }
         ],
         "output_list" : [
@@ -99,6 +103,10 @@
         "input_list" : [
           {
             "uri" : "link to droplets_all.json",
+            "access_time" : ""
+          },
+          {
+            "uri" : "link to GeneCount-strainer-params.json",
             "access_time" : ""
           }
         ],

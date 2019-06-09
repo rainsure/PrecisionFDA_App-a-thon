@@ -1,0 +1,13 @@
+{
+  "YediDetectionParams" : {
+    "YediDetectionSoftware" : "LibDropImage",
+    "YediDetectionBranchMaster" : 0,
+    "YediDetectionBranchMinor" : 18,
+    "YediDetectionBuildDate" : "Feb 20 2019",
+    "DetectionWrapperVersion" : "0.4.Feb 20 2019",
+    "Channel Map" : {
+      "Channel 0" : "FAM",
+      "Channel 1" : "HEX"
+    }
+  }
+}
