@@ -1,0 +1,13 @@
+{
+  "ClusterParameters" : {
+    "ClusterMode" : "Manual",
+    "Threshold" : [
+      [
+        3000
+      ],
+      [
+        13500
+      ]
+    ]
+  }
+}

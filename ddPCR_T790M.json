@@ -127,11 +127,15 @@
           {
             "uri" : "link to droplets_effective.json",
             "access_time" : ""
+          },
+          {
+            "uri" : "link to GeneCunt-distiller-params.json",
+            "access_time" : ""
           }
         ],
         "output_list" : [
           {
-            "uri" : "link to concentration.json",
+            "uri" : "link to ddPCR_T790M_concentration.json",
             "access_time" : ""
           }
         ]
@@ -144,13 +148,13 @@
         "prerequisite" : [],
         "input_list" : [
           {
-            "uri" : "link to concentration.json",
+            "uri" : "link to ddPCR_T790M_concentration.json",
             "access_time" : ""
           }
         ],
         "output_list" : [
           {
-            "uri" : "link to T790M_report.json",
+            "uri" : "link to ddPCR_T790M_report.json",
             "access_time" : ""
           }
         ]
@@ -165,8 +169,8 @@
       "scm_repository" : "https://github.com/rainsure/PrecisionFDA_App-a-thon",
       "scm_type" : "git",
       "scm_commit" : "a65e641219fc6ac28db1b0e058aa2135d877d91e",
-      "scm_path" : "ddPCR.json",
-      "scm_preview" : "https://github.com/rainsure/PrecisionFDA_App-a-thon/blob/master/ddPCR.json"
+      "scm_path" : "ddPCR_T790M.json",
+      "scm_preview" : "https://github.com/rainsure/PrecisionFDA_App-a-thon/blob/master/ddPCR_T790M.json"
     }
   },
   "execution_domain" : {

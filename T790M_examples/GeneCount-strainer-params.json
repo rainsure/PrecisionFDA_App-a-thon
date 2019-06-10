@@ -1,15 +1,6 @@
 {
   "StrainerParameters" : {
     "FilteringDroplets_IsEnabled" : true,
-    "Sizing" : {
-      "Sizing_IsEnabled" : true,
-      "Sizing_SigmaMultiplier" : 3,
-      "Sizing_Count" : 616,
-      "Sizing_Rate" : 0.024,
-      "Sizing_Mean" : 204.24,
-      "Sizing_LimitMin" : 117.35,
-      "Sizing_LimitMax" : 301.14
-    },
     "QualityMetric" : {
       "QualityMetric_IsEnabled" : true,
       "QualityMetric_Threshold" : 0.85,

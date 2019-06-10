@@ -1,0 +1,14 @@
+{
+  "TestName" : "T790M percentage",
+  "PatientID" : "PI345987",
+  "SampleType" : "05-05-2020",
+  "PhysicianID" : "MD03327",
+  "TestDate" : "05-04-2020",
+  "OrderDate" : "04-04-2020",
+  "DataAnalysisDate" : "05-05-2020",
+  "ClinicalResult" : {
+    "T790Percentage" : 6.3,
+    "T790Positive" : true,
+    "ClinicalInterpretation" : "TBD"
+  }
+}
