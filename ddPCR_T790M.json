@@ -261,66 +261,67 @@
     "input_subdomain" : [
       {
         "uri" : {
-          "filename" : "Hepatitis C virus genotype 1",
-          "uri" : "http://www.ncbi.nlm.nih.gov/nuccore/22129792",
-          "access_time" : "2017-01-24T09:40:17-0500"
+          "filename" : "link to GeneCount-distiller-params.json\t",
+          "uri" : "",
+          "access_time" : ""
         }
       },
       {
         "uri" : {
-          "filename" : "Hepatitis C virus type 1b complete genome",
-          "uri" : "http://www.ncbi.nlm.nih.gov/nuccore/5420376",
-          "access_time" : "2017-01-24T09:40:17-0500"
+          "filename" : "link to GeneCount-platter-params.json",
+          "uri" : "",
+          "access_time" : ""
         }
       },
       {
         "uri" : {
-          "filename" : "Hepatitis C virus (isolate JFH-1) genomic RNA",
-          "uri" : "http://www.ncbi.nlm.nih.gov/nuccore/13122261",
-          "access_time" : "2017-01-24T09:40:17-0500"
+          "filename" : "GeneCount-scavenger-params.json",
+          "uri" : "",
+          "access_time" : ""
         }
       },
       {
         "uri" : {
-          "uri" : "http://www.ncbi.nlm.nih.gov/nuccore/386646758",
-          "access_time" : "2017-01-24T09:40:17-0500"
+          "filename" : "link to GeneCount-strainer-params.json",
+          "uri" : "",
+          "access_time" : ""
         }
       },
       {
         "uri" : {
-          "filename" : "Hepatitis C virus S52 polyprotein gene",
-          "uri" : "http://www.ncbi.nlm.nih.gov/nuccore/295311559",
-          "access_time" : "2017-01-24T09:40:17-0500"
-        }
-      },
-      {
-        "uri" : {
-          "filename" : "HCV1a_drug_resistant_sample0001-01",
-          "uri" : "http://example.com/nuc-read/514682",
-          "access_time" : "2017-01-24T09:40:17-0500"
-        }
-      },
-      {
-        "uri" : {
-          "filename" : "HCV1a_drug_resistant_sample0001-02",
-          "uri" : "http://example.com/nuc-read/514683",
-          "access_time" : "2017-01-24T09:40:17-0500"
+          "filename" : "link to raw images",
+          "uri" : "",
+          "access_time" : ""
         }
       }
     ],
     "output_subdomain" : [
       {
-        "mediatype" : "text/csv",
+        "mediatype" : "text/json",
         "uri" : {
-          "uri" : "http://example.com/data/514769/dnaAccessionBased.csv",
-          "access_time" : "2017-01-24T09:40:17-0500"
+          "uri" : "link to ddPCR_T790M_droplets_all.json",
+          "access_time" : ""
         }
       },
       {
-        "mediatype" : "text/csv",
+        "mediatype" : "text/json",
         "uri" : {
-          "uri" : "http://example.com/data/514801/SNPProfile*.csv",
-          "access_time" : "2017-01-24T09:40:17-0500"
+          "uri" : "link to ddPCR_T790M_droplets_effective.json",
+          "access_time" : ""
+        }
+      },
+      {
+        "mediatype" : "text/json",
+        "uri" : {
+          "uri" : "link to ddPCR_T790M_concentration.json",
+          "access_time" : ""
+        }
+      },
+      {
+        "mediatype" : "text/json",
+        "uri" : {
+          "uri" : "link to ddPCR_T790M_report.json",
+          "access_time" : ""
         }
       }
     ]
