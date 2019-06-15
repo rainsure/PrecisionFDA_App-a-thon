@@ -83,37 +83,37 @@
             "access_time" : ""
           },
           {
-            "uri" : "link to GeneCount-scavenger-params.json",
-            "access_time" : ""
+            "uri" : "https://github.com/rainsure/PrecisionFDA_App-a-thon/blob/master/T790M_examples/GeneCount-scavenger-params.json",
+            "access_time" : "2019-06-14T00:00:00+0800"
           }
         ],
         "output_list" : [
           {
-            "uri" : "link to droplets_all.json",
-            "access_time" : ""
+            "uri" : "https://github.com/rainsure/PrecisionFDA_App-a-thon/blob/master/T790M_examples/ddPCR_T790M_droplets_all.json",
+            "access_time" : "2019-06-14T00:00:00+0800"
           }
         ]
       },
       {
         "step_number" : 2,
-        "name" : "GeneCount-colander",
+        "name" : "GeneCount-strainer",
         "description" : "Remove droplets failing quality control",
         "version" : "1.3",
         "prerequisite" : [],
         "input_list" : [
           {
-            "uri" : "link to droplets_all.json",
-            "access_time" : ""
+            "uri" : "https://github.com/rainsure/PrecisionFDA_App-a-thon/blob/master/T790M_examples/ddPCR_T790M_droplets_all.json",
+            "access_time" : "2019-06-14T00:00:00+0800"
           },
           {
-            "uri" : "link to GeneCount-strainer-params.json",
-            "access_time" : ""
+            "uri" : "https://github.com/rainsure/PrecisionFDA_App-a-thon/blob/master/T790M_examples/GeneCount-strainer-params.json",
+            "access_time" : "2019-06-14T00:00:00+0800"
           }
         ],
         "output_list" : [
           {
-            "uri" : "link to droplets_effective.json",
-            "access_time" : ""
+            "uri" : "https://github.com/rainsure/PrecisionFDA_App-a-thon/blob/master/T790M_examples/ddPCR_T790M_droplets_effective.json",
+            "access_time" : "2019-06-14T00:00:00+0800"
           }
         ]
       },
@@ -125,18 +125,18 @@
         "prerequisite" : [],
         "input_list" : [
           {
-            "uri" : "link to droplets_effective.json",
-            "access_time" : ""
+            "uri" : "https://github.com/rainsure/PrecisionFDA_App-a-thon/blob/master/T790M_examples/ddPCR_T790M_droplets_effective.json",
+            "access_time" : "2019-06-14T00:00:00+0800"
           },
           {
-            "uri" : "link to GeneCunt-distiller-params.json",
-            "access_time" : ""
+            "uri" : "https://github.com/rainsure/PrecisionFDA_App-a-thon/blob/master/T790M_examples/GeneCount-distiller-params.json",
+            "access_time" : "2019-06-14T00:00:00+0800"
           }
         ],
         "output_list" : [
           {
-            "uri" : "link to ddPCR_T790M_concentration.json",
-            "access_time" : ""
+            "uri" : "https://github.com/rainsure/PrecisionFDA_App-a-thon/blob/master/T790M_examples/ddPCR_T790M_concentration.json",
+            "access_time" : "2019-06-14T00:00:00+0800"
           }
         ]
       },
@@ -148,14 +148,14 @@
         "prerequisite" : [],
         "input_list" : [
           {
-            "uri" : "link to ddPCR_T790M_concentration.json",
-            "access_time" : ""
+            "uri" : "https://github.com/rainsure/PrecisionFDA_App-a-thon/blob/master/T790M_examples/ddPCR_T790M_concentration.json",
+            "access_time" : "2019-06-14T00:00:00+0800"
           }
         ],
         "output_list" : [
           {
-            "uri" : "link to ddPCR_T790M_report.json",
-            "access_time" : ""
+            "uri" : "https://github.com/rainsure/PrecisionFDA_App-a-thon/blob/master/T790M_examples/ddPCR_T790M_report.json",
+            "access_time" : "2019-06-14T00:00:00+0800"
           }
         ]
       }
@@ -261,30 +261,30 @@
     "input_subdomain" : [
       {
         "uri" : {
-          "filename" : "link to GeneCount-distiller-params.json\t",
-          "uri" : "",
-          "access_time" : ""
+          "filename" : "GeneCount-distiller-params.json\t",
+          "uri" : "https://github.com/rainsure/PrecisionFDA_App-a-thon/blob/master/T790M_examples/GeneCount-distiller-params.json",
+          "access_time" : "2019-06-14T00:00:00+0800"
         }
       },
       {
         "uri" : {
-          "filename" : "link to GeneCount-platter-params.json",
-          "uri" : "",
-          "access_time" : ""
+          "filename" : "GeneCount-platter-params.json",
+          "uri" : "https://github.com/rainsure/PrecisionFDA_App-a-thon/blob/master/T790M_examples/GeneCount-platter-params.json",
+          "access_time" : "2019-06-14T00:00:00+0800"
         }
       },
       {
         "uri" : {
           "filename" : "GeneCount-scavenger-params.json",
-          "uri" : "",
-          "access_time" : ""
+          "uri" : "https://github.com/rainsure/PrecisionFDA_App-a-thon/blob/master/T790M_examples/GeneCount-scavenger-params.json",
+          "access_time" : "2019-06-14T00:00:00+0800"
         }
       },
       {
         "uri" : {
-          "filename" : "link to GeneCount-strainer-params.json",
-          "uri" : "",
-          "access_time" : ""
+          "filename" : "GeneCount-strainer-params.json",
+          "uri" : "https://github.com/rainsure/PrecisionFDA_App-a-thon/blob/master/T790M_examples/GeneCount-strainer-params.json",
+          "access_time" : "2019-06-14T00:00:00+0800"
         }
       },
       {
@@ -299,29 +299,29 @@
       {
         "mediatype" : "text/json",
         "uri" : {
-          "uri" : "link to ddPCR_T790M_droplets_all.json",
-          "access_time" : ""
+          "uri" : "https://github.com/rainsure/PrecisionFDA_App-a-thon/blob/master/T790M_examples/ddPCR_T790M_droplets_all.json",
+          "access_time" : "2019-06-14T00:00:00+0800"
         }
       },
       {
         "mediatype" : "text/json",
         "uri" : {
-          "uri" : "link to ddPCR_T790M_droplets_effective.json",
-          "access_time" : ""
+          "uri" : "https://github.com/rainsure/PrecisionFDA_App-a-thon/blob/master/T790M_examples/ddPCR_T790M_droplets_effective.json",
+          "access_time" : "2019-06-14T00:00:00+0800"
         }
       },
       {
         "mediatype" : "text/json",
         "uri" : {
-          "uri" : "link to ddPCR_T790M_concentration.json",
-          "access_time" : ""
+          "uri" : "https://github.com/rainsure/PrecisionFDA_App-a-thon/blob/master/T790M_examples/ddPCR_T790M_concentration.json",
+          "access_time" : "2019-06-14T00:00:00+0800"
         }
       },
       {
         "mediatype" : "text/json",
         "uri" : {
-          "uri" : "link to ddPCR_T790M_report.json",
-          "access_time" : ""
+          "uri" : "https://github.com/rainsure/PrecisionFDA_App-a-thon/blob/master/T790M_examples/ddPCR_T790M_report.json",
+          "access_time" : "2019-06-14T00:00:00+0800"
         }
       }
     ]
